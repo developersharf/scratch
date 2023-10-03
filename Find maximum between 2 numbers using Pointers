@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, *ptr1, *ptr2;
+    
+    printf("Enter two numbers: ");
+    scanf("%d%d", &num1, &num2);
+
+
+    ptr1 = &num1; // remember to add an "&", unless it won't be able to access the variable location
+    ptr2 = &num2; // remember to add an "&", unless it won't be able to access the variable location
+    
+    if (*ptr1 > *ptr2){
+        printf("%d is the max.\n", *ptr1);
+    }
+    // by adding "*" before the "ptr1" or "ptr2" it gives you access to pick up the value the memory is keeping.
+
+    else if (*ptr1 < *ptr2){
+        printf("%d is the max.\n", *ptr2);
+    }
+    else{
+        printf("Equal.\n");
+    }
+    
+    return 0;
+}
